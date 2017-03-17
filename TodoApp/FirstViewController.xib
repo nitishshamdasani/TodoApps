@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="TodoApp" customModuleProvider="target">
+            <connections>
+                <outlet property="tblView" destination="Edo-Vu-toO" id="Nu7-gu-pb6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Edo-Vu-toO">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="50O-fO-yoC"/>
+                        <outlet property="delegate" destination="-1" id="ATZ-6H-VQJ"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHK-Be-puf">
+                    <rect key="frame" x="0.0" y="508" width="160" height="30"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.4549019608" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Date ascending"/>
+                    <connections>
+                        <action selector="btnDateAscending:" destination="-1" eventType="touchUpInside" id="dwI-Yn-qmB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUJ-Wh-zJg">
+                    <rect key="frame" x="160" y="508" width="160" height="30"/>
+                    <color key="backgroundColor" red="0.93995838077617566" green="1" blue="0.10268810496514102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="date descending"/>
+                    <connections>
+                        <action selector="btnDateDecending:" destination="-1" eventType="touchUpInside" id="Mxa-pq-toU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4v-bb-Vkz">
+                    <rect key="frame" x="0.0" y="538" width="320" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.024046201735822614" blue="0.048178590743253924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="add todo"/>
+                    <connections>
+                        <action selector="addBtn:" destination="-1" eventType="touchUpInside" id="NCG-JY-Kn4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eUJ-Wh-zJg" firstAttribute="leading" secondItem="IHK-Be-puf" secondAttribute="trailing" id="Ec9-Or-Urv"/>
+                <constraint firstItem="Edo-Vu-toO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GWF-O7-9V1"/>
+                <constraint firstItem="Edo-Vu-toO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QNK-cW-2OQ"/>
+                <constraint firstItem="IHK-Be-puf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QO3-1y-K0Z"/>
+                <constraint firstItem="IHK-Be-puf" firstAttribute="top" secondItem="Edo-Vu-toO" secondAttribute="bottom" constant="4" id="RCg-MQ-zJF"/>
+                <constraint firstAttribute="trailing" secondItem="l4v-bb-Vkz" secondAttribute="trailing" id="TcW-sX-fdy"/>
+                <constraint firstItem="l4v-bb-Vkz" firstAttribute="top" secondItem="eUJ-Wh-zJg" secondAttribute="bottom" id="U4G-Ag-lMi"/>
+                <constraint firstItem="eUJ-Wh-zJg" firstAttribute="width" secondItem="IHK-Be-puf" secondAttribute="width" id="Xc4-zG-LqU"/>
+                <constraint firstAttribute="trailing" secondItem="Edo-Vu-toO" secondAttribute="trailing" id="aAK-2q-hR1"/>
+                <constraint firstAttribute="trailing" secondItem="eUJ-Wh-zJg" secondAttribute="trailing" id="kyQ-yX-o1Q"/>
+                <constraint firstItem="eUJ-Wh-zJg" firstAttribute="top" secondItem="Edo-Vu-toO" secondAttribute="bottom" constant="4" id="pca-XB-zS5"/>
+                <constraint firstItem="eUJ-Wh-zJg" firstAttribute="height" secondItem="IHK-Be-puf" secondAttribute="height" id="qap-I2-EZn"/>
+                <constraint firstItem="l4v-bb-Vkz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rtb-uf-y9t"/>
+                <constraint firstAttribute="bottom" secondItem="l4v-bb-Vkz" secondAttribute="bottom" id="x4r-FG-fPg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
